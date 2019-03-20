@@ -50,6 +50,10 @@ public class Book {
 		this.title = title;
 		this.author = author;
 	}
+
+	public Book() {
+
+	}
 	
 	
 }
