@@ -77,6 +77,7 @@ public class AppConfig {
 			
 	}
 	
+	@Bean   ///  No qualifying bean of type 'org.springframework.transaction.PlatformTransactionManager' available at com.san.spring.controller.BookController.list(BookController.java:35)
 	public HibernateTransactionManager getTransactionManager() {
 		
 		HibernateTransactionManager transactionManager = new HibernateTransactionManager();
