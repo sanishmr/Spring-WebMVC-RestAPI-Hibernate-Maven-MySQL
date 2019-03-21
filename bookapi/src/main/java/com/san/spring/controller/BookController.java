@@ -53,7 +53,7 @@ public class BookController {
 				
 	}
 	
-	// Get a single book
+	// Get a  book
 	
 	@GetMapping("/api/book/{id}")
 	public ResponseEntity<Book> get(@PathVariable("id") long id) {
