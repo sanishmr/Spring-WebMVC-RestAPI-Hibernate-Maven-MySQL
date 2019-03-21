@@ -16,17 +16,18 @@ public class BookServiceImpl implements BookService {
 	@Autowired
 	private BookDAO bookDAO;
 	
-
+	@org.springframework.transaction.annotation.Transactional  
+	//@Transactional
 	@Override
 	public long save(Book book) {
-		// TODO Auto-generated method stub
-		return 0;
+		return bookDAO.save(book);
+		
 	}
 
 	@Override
+	@Transactional
 	public Book get(long id) {
-		// TODO Auto-generated method stub
-		return null;
+		return bookDAO.get(id);
 	}
 
 	@Override
@@ -36,14 +37,16 @@ public class BookServiceImpl implements BookService {
 	}
 
 	@Override
+	@Transactional
 	public void update(long id, Book book) {
-		// TODO Auto-generated method stub
+		bookDAO.update(id, book);
 		
 	}
 
 	@Override
+	@Transactional
 	public void delete(long id) {
-		// TODO Auto-generated method stub
+		bookDAO.delete(id);
 		
 	}
 
